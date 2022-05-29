@@ -1,0 +1,33 @@
+name: Tests
+
+on: [push]
+
+jobs:
+
+  build:
+    name: CDK Build and Test 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: CDK - Install dependencies
+        run: npm ci
+        working-directory: ./cdk
+      - name: CDK - Build
+        run: npm run build
+        working-directory: ./cdk
+# Enable CDK tests after setting up AWS account number and credentials on github secrets.
+#      - name: CDK - Test
+#        run: npm run test
+#        working-directory: ./cdk
+
+  test:
+    name: App Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Dotnet Lambda - Build
+        run: npm run build-dotnet-lambda
+        working-directory: ./cdk
+      - name: Dotnet Lambda - Test
+        run: npm run test-dotnet-lambda
+        working-directory: ./cdk
