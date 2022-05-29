@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: CDK - Install dependencies
-        run: npm run i
+        run: npm ci
         working-directory: ./cdk
       - name: CDK - Build
         run: npm run build
