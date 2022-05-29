@@ -15,7 +15,8 @@
     "bootstrap-test": "cdk bootstrap --profile aws_profile_name AWS_ACCOUNT_ARN_HERE",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk-dry-run": "cdk synth"
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",

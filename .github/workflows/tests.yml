@@ -15,9 +15,10 @@ jobs:
       - name: CDK - Build
         run: npm run build
         working-directory: ./cdk
-      - name: CDK - Test
-        run: npm run test
-        working-directory: ./cdk
+# Enable CDK tests after setting up AWS account number and credentials on github secrets.
+#      - name: CDK - Test
+#        run: npm run test
+#        working-directory: ./cdk
 
   test:
     name: App Build and Test
