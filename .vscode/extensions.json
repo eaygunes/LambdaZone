@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "waderyan.gitblame",
+        "streetsidesoftware.code-spell-checker",
+        "alfnielsen.vsc-organize-imports",
+        "eamodio.gitlens"
+    ]
+}

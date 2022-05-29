@@ -1,0 +1,34 @@
+{
+    "files.exclude": {
+        "**/Debug": true,
+        "**/Release": true,
+        "**/cdk/build": true,
+        "**/cdk.out": true,
+        "**/obj": true,
+        "**/*.d.ts": true
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.fixAll.eslint": true
+        },
+        "editor.formatOnSave": false,
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.options": {
+        "ignore": false,
+    },
+    "cSpell.enableFiletypes": [
+        "feature",
+        "vm"
+    ],
+    "cSpell.words": [
+    ]
+}

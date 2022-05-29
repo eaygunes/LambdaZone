@@ -1,0 +1,36 @@
+{
+  "name": "cdk",
+  "author": "Eren Aygunes - aygunese@gmail.com",
+  "license": "BSD-3-Clause https://spdx.org/licenses/BSD-3-Clause.html",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": ".\\build\\js\\src\\cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build-dotnet-lambda": "dotnet publish ..\\lambdas\\domain1\\domain1-sample-lambda\\src\\SampleLambda.csproj -c Release -r linux-x64",
+    "deploy-test": "cdk deploy --profile AWS_PROFILE_HERE --outputs-file ./cdk-exports.json -c prefix=\"stackNamePrefix\" -c awsAccount=AWS_ACCOUNT_NO_HERE -c awsRegion=AWS_REGION_HERE --require-approval never",
+    "clean-publish": "npm run build && npm run build-app && npm run deploy-test",
+    "bootstrap-test": "cdk bootstrap --profile aws_profile_name AWS_ACCOUNT_ARN_HERE",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "aws-cdk": "2.24.1",
+    "ts-node": "^10.7.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.157.0",
+    "aws-cdk-lib": "2.24.1",
+    "aws-sdk": "^2.1145.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
