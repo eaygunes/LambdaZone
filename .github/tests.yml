@@ -1,14 +1,7 @@
 name: Tests
 
 on:
-  push:
-    tags-ignore:
-      - '**'
-    branches-ignore:
-      - '**'
-  workflow_dispatch:
-    branches:
-      - '**'
+  push: [push]
 
 jobs:
 
