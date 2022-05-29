@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "build-dotnet-lambda": "dotnet publish ..\\lambdas\\domain1\\domain1-sample-lambda\\src\\SampleLambda.csproj -c Release -r linux-x64",
-    "test-dotnet-lambda": "dotnet test ..\\lambdas\\domain1\\domain1-sample-lambda\\test\\SampleLambda.Tests.csproj",
+    "build-dotnet-lambda": "dotnet publish ../lambdas/domain1/domain1-sample-lambda/src/SampleLambda.csproj -c Release -r linux-x64",
+    "test-dotnet-lambda": "dotnet test ../lambdas/domain1/domain1-sample-lambda/test/SampleLambda.Tests.csproj",
     "deploy-test": "cdk deploy --profile AWS_PROFILE_HERE --outputs-file ./cdk-exports.json -c prefix=\"stackNamePrefix\" -c awsAccount=AWS_ACCOUNT_NO_HERE -c awsRegion=AWS_REGION_HERE --require-approval never",
     "clean-publish": "npm run build && npm run build-app && npm run deploy-test",
     "bootstrap-test": "cdk bootstrap --profile aws_profile_name AWS_ACCOUNT_ARN_HERE",
